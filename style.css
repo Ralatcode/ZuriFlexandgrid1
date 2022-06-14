@@ -1,125 +1,204 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap");
 
 :root {
-    --bright-orange: hsl(31, 77%, 52%);
-    --dark-cyan: hsl(184, 100%, 22%);
-    --very-dark-cyan: hsl(179, 100%, 13%);
-    --paragraph-color: hsla(0, 0%, 100%, 0.75);
-    --very-light-gray: hsl(0, 0%, 95%);
-    --Lexend-Daca: "Lexend Deca", sans-serif;
-    --Big-Shoulders-Display: "Big Shoulders Display", cursive;
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --paragraph-color: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --Lexend-Daca: "Lexend Deca", sans-serif;
+  --Big-Shoulders-Display: "Big Shoulders Display", cursive;
 }
 
 html {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 body {
-    background-color: var(--very-light-gray);
+  background-color: var(--very-light-gray);
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+header {
+  padding-top: 4rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+    margin-left: 2.5em;
+    background: var(--dark-cyan);
+    border: 1px solid var(--dark-cyan);
+    border-radius: 6px;
+    box-shadow: var(--very-dark-cyan) 1px 2px 4px;
+    font-family: var(--Lexend-Daca);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 0.8rem 2rem;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none; 
+    touch-action: manipulation;
+  }
+  
+  .nav-link:hover,
+  .nav-link:active {
+    background-color: var(--bright-orange);
+    background-position: 0 0;
+    color: var(--very-dark-cyan);
+  }
+  
+  .nav-link:active {
+    opacity: 0.5;
+  }
+  
+  .nav-link > a {
+    text-decoration: none;
+    color: var(--very-light-gray);
+  }
+  
+  .nav-link > a:hover,
+  .nav-link > a:active{
+    color: var(--very-dark-cyan);
+  }
 
 main {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    border-radius: 10px;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-@media (min-width: 750px) {
-    .container {
-        width: 750px;
-    }
-}
-
-.col1, .col2, .col3 {
-    width: calc(100% / 3);
-    padding: 3rem 2rem;
+.col1,
+.col2,
+.col3 {
+  width: calc(100% / 3);
+  padding: 3rem 2rem;
 }
 
 .col1 {
-    background-color: var(--bright-orange);
+  background-color: var(--bright-orange);
 }
 
 .col2 {
-    background-color: var(--dark-cyan);
+  background-color: var(--dark-cyan);
 }
 
 .col3 {
-    background-color: var(--very-dark-cyan);
+  background-color: var(--very-dark-cyan);
 }
 
 .col-heading {
-    font-family: var(--Big-Shoulders-Display);
-    color: var(--very-light-gray);
-    font-size: 2.2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding-top: 1.5rem;
+  font-family: var(--Big-Shoulders-Display);
+  color: var(--very-light-gray);
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 1.5rem;
 }
 
 .col-paragraph {
-    color: var(--paragraph-color);
-    font-family: var(--Lexend-Daca);
-    font-weight: 400;
-    font-size: 1rem;
-    padding: 0.2rem;
-    margin-top: 1.2rem;
+  color: var(--paragraph-color);
+  font-family: var(--Lexend-Daca);
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 0.2rem;
+  margin-top: 1.2rem;
 }
 
 .col-btn {
-    font-family: var(--Lexend-Daca);
-    font-size: 0.8rem;
-    background-color: var(--very-light-gray);
-    border-radius: 30px;
-    width: 120px;
-    height: 40px;
-    border: none;
-    outline: none;
-    margin-top: 5rem;
-    cursor: pointer;
+  font-family: var(--Lexend-Daca);
+  font-size: 0.8rem;
+  background-color: var(--very-light-gray);
+  border-radius: 30px;
+  width: 120px;
+  height: 40px;
+  border: none;
+  outline: none;
+  margin-top: 5rem;
+  cursor: pointer;
 }
 
 .col1 > .col-btn {
-    color: var(--bright-orange);
+  color: var(--bright-orange);
 }
 
 .col2 > .col-btn {
-    color: var(--dark-cyan);
+  color: var(--dark-cyan);
 }
 
 .col3 > .col-btn {
-    color: var(--very-dark-cyan);
+  color: var(--very-dark-cyan);
 }
 
 .col1 > .col-btn:hover {
-    color: var(--very-light-gray);
-    background-color: var(--bright-orange);
-    border: 2px solid var(--very-light-gray)
+  color: var(--very-light-gray);
+  background-color: var(--bright-orange);
+  border: 2px solid var(--very-light-gray);
 }
 
 .col2 > .col-btn:hover {
-    color: var(--very-light-gray);
-    background-color: var(--dark-cyan);
-    border: 2px solid var(--very-light-gray)
+  color: var(--very-light-gray);
+  background-color: var(--dark-cyan);
+  border: 2px solid var(--very-light-gray);
 }
 
 .col3 > .col-btn:hover {
-    color: var(--very-light-gray);
-    background-color: var(--very-dark-cyan);
-    border: 2px solid var(--very-light-gray)
+  color: var(--very-light-gray);
+  background-color: var(--very-dark-cyan);
+  border: 2px solid var(--very-light-gray);
+}
+
+@media (min-width: 750px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (max-width: 530px) {
+  main {
+    all: unset;
+  }
+
+  .container {
+    flex-direction: column;
+    border-radius: 0;
+    align-items: center;
+  }
+
+  .col1,
+  .col2,
+  .col3 {
+    text-align: center;
+    align-items: center;
+    width: 90%;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+  }
 }
