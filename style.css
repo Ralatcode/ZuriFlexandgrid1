@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+    --Lexend-Daca: "Lexend Deca", sans-serif;
+    --Big-Shoulders-Display: "Big Shoulders Display", cursive;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    background-color: var(--very-light-gray);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (min-width: 750px) {
+    .container {
+        width: 750px;
+    }
+}
+
+.col1, .col2, .col3 {
+    width: calc(100% / 3);
+    padding: 3rem 2rem;
+}
+
+.col1 {
+    background-color: var(--bright-orange);
+}
+
+.col2 {
+    background-color: var(--dark-cyan);
+}
+
+.col3 {
+    background-color: var(--very-dark-cyan);
+}
+
+.col-heading {
+    font-family: var(--Big-Shoulders-Display);
+    color: var(--very-light-gray);
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 1.5rem;
+}
+
+.col-paragraph {
+    color: var(--paragraph-color);
+    font-family: var(--Lexend-Daca);
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0.2rem;
+    margin-top: 1.2rem;
+}
+
+.col-btn {
+    font-family: var(--Lexend-Daca);
+    font-size: 0.8rem;
+    background-color: var(--very-light-gray);
+    border-radius: 30px;
+    width: 120px;
+    height: 40px;
+    border: none;
+    outline: none;
+    margin-top: 5rem;
+    cursor: pointer;
+}
+
+.col1 > .col-btn {
+    color: var(--bright-orange);
+}
+
+.col2 > .col-btn {
+    color: var(--dark-cyan);
+}
+
+.col3 > .col-btn {
+    color: var(--very-dark-cyan);
+}
+
+.col1 > .col-btn:hover {
+    color: var(--very-light-gray);
+    background-color: var(--bright-orange);
+    border: 2px solid var(--very-light-gray)
+}
+
+.col2 > .col-btn:hover {
+    color: var(--very-light-gray);
+    background-color: var(--dark-cyan);
+    border: 2px solid var(--very-light-gray)
+}
+
+.col3 > .col-btn:hover {
+    color: var(--very-light-gray);
+    background-color: var(--very-dark-cyan);
+    border: 2px solid var(--very-light-gray)
+}
