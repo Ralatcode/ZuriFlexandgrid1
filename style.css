@@ -222,9 +222,17 @@ nav {
   }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 560px) {
   main {
     all: unset;
+  }
+
+  header {
+    padding-top: 2rem;
+  }
+
+  .flex-main {
+    height: unset;
   }
 
   .container {
